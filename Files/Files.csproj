@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA110523-284D-4156-B697-86A78164ED9E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Files</RootNamespace>
+    <AssemblyName>Files</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="dlls\de\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="dlls\de\Microsoft.Data.OData.resources.dll" />
+    <Content Include="dlls\de\System.Spatial.resources.dll" />
+    <Content Include="dlls\es\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="dlls\es\Microsoft.Data.OData.resources.dll" />
+    <Content Include="dlls\es\System.Spatial.resources.dll" />
+    <Content Include="dlls\fr\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="dlls\fr\Microsoft.Data.OData.resources.dll" />
+    <Content Include="dlls\fr\System.Spatial.resources.dll" />
+    <Content Include="dlls\it\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="dlls\it\Microsoft.Data.OData.resources.dll" />
+    <Content Include="dlls\it\System.Spatial.resources.dll" />
+    <Content Include="dlls\ja\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="dlls\ja\Microsoft.Data.OData.resources.dll" />
+    <Content Include="dlls\ja\System.Spatial.resources.dll" />
+    <Content Include="dlls\ko\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="dlls\ko\Microsoft.Data.OData.resources.dll" />
+    <Content Include="dlls\ko\System.Spatial.resources.dll" />
+    <Content Include="dlls\Microsoft.Data.Edm.dll" />
+    <Content Include="dlls\Microsoft.Data.OData.dll" />
+    <Content Include="dlls\Microsoft.Web.Mvc.FixedDisplayModes.dll" />
+    <Content Include="dlls\ru\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="dlls\ru\Microsoft.Data.OData.resources.dll" />
+    <Content Include="dlls\ru\System.Spatial.resources.dll" />
+    <Content Include="dlls\System.Spatial.dll" />
+    <Content Include="dlls\System.Web.Helpers.dll" />
+    <Content Include="dlls\System.Web.Http.OData.dll" />
+    <Content Include="dlls\System.Web.Optimization.dll" />
+    <Content Include="dlls\WebGrease.dll" />
+    <Content Include="dlls\WebMatrix.Data.dll" />
+    <Content Include="dlls\WebMatrix.WebData.dll" />
+    <Content Include="dlls\zh-Hans\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="dlls\zh-Hans\Microsoft.Data.OData.resources.dll" />
+    <Content Include="dlls\zh-Hans\System.Spatial.resources.dll" />
+    <Content Include="dlls\zh-Hant\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="dlls\zh-Hant\Microsoft.Data.OData.resources.dll" />
+    <Content Include="dlls\zh-Hant\System.Spatial.resources.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
