@@ -32,6 +32,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.txtStock = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.btnRangePrice = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -72,11 +75,40 @@
             this.txtStock.TabIndex = 3;
             this.txtStock.Text = "000001";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(13, 138);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker1.Value = new System.DateTime(2015, 8, 3, 0, 0, 0, 0);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(13, 166);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker2.TabIndex = 5;
+            this.dateTimePicker2.Value = new System.DateTime(2015, 8, 10, 0, 0, 0, 0);
+            // 
+            // btnRangePrice
+            // 
+            this.btnRangePrice.Location = new System.Drawing.Point(13, 194);
+            this.btnRangePrice.Name = "btnRangePrice";
+            this.btnRangePrice.Size = new System.Drawing.Size(131, 23);
+            this.btnRangePrice.TabIndex = 6;
+            this.btnRangePrice.Text = "获取期间最高最低价";
+            this.btnRangePrice.UseVisualStyleBackColor = true;
+            this.btnRangePrice.Click += new System.EventHandler(this.btnRangePrice_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.btnRangePrice);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.btnStock);
             this.Controls.Add(this.button2);
@@ -95,5 +127,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnStock;
         private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button btnRangePrice;
     }
 }

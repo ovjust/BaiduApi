@@ -1,4 +1,5 @@
 ﻿using BaiduApi.BaseApi;
+using BaiduApi.BaseApi.Stock;
 using DotNet_Utilities;
 using System;
 using System.Collections.Generic;
@@ -53,7 +54,13 @@ namespace BaiduApi.WinForm
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            BaiduStock.GetResult(txtStock.Text);
+            //BaiduStock.GetResult(txtStock.Text);
+            TencentStock.GetStockLong(new string[]{ txtStock.Text});
+        }
+
+        private void btnRangePrice_Click(object sender, EventArgs e)
+        {
+         var dd=   SinaStock.GetDatesPriceSlice(txtStock.Text, dateTimePicker1.Value, dateTimePicker2.Value);
         }
 
     }

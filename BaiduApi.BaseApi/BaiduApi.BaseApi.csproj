@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BaiduApi.BaseApi</RootNamespace>
     <AssemblyName>BaiduApi.BaseApi</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,12 +49,16 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CsQuery">
+      <HintPath>..\..\Ovjust.StockNote\packages\CsQuery.1.3.4\lib\net40\CsQuery.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\Ovjust_Common\DotNet.Utilities\DLL\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -65,14 +70,25 @@
     <Compile Include="BaiduRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stock\BaiduStock.cs" />
-    <Compile Include="Stock\StockModel.cs" />
+    <Compile Include="Stock\SinaStockWB.cs" />
+    <Compile Include="Stock\StockCommon.cs" />
+    <Compile Include="Stock\ShdjtStockModel.cs" />
     <Compile Include="Stock\JuheStock.cs" />
+    <Compile Include="Stock\TencentStock.cs" />
+    <Compile Include="Stock\SinaStockAsync.cs" />
+    <Compile Include="Stock\ShdjtStock.cs" />
+    <Compile Include="Stock\SinaStock.cs" />
+    <Compile Include="Stock\TencentStockModel.cs" />
+    <Compile Include="Stock\ShdjtStockModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Ovjust_Common\DotNet.Utilities\DotNet.Utilities.csproj">
       <Project>{0a9704f9-7864-45af-bfa7-e09f2b30a29f}</Project>
       <Name>DotNet.Utilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
