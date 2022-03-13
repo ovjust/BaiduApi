@@ -49,7 +49,7 @@ namespace BaiduApi.BaseApi
             //    }
             //  ]
             //}
-            var jObject = NewtonJson.ParseJson(result);
+            var jObject = NewtonJsonHelper.ParseObject(result);
             if (jObject.Value<int>("errNum") == -1)
                 return null;
 

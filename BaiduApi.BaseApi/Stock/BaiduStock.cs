@@ -46,14 +46,14 @@ namespace BaiduApi.BaseApi
             string param = "stockid=" + stockCode;
             string result =BaiduRequest.Request(url, param);
             //错误返回{"errNum":-1,"errMsg":"\u56fe\u7247\u683c\u5f0f\u975e\u6cd5","querySign":"","retData":[]}
-            var jObject = NewtonJson.ParseJson(result);
+            var jObject = NewtonJsonHelper.ParseObject(result);
             if (jObject.Value<int>("errNum") == -1)
                 return null;
 
             return jObject;
             //["retData"]["stockinfo"]["currentPrice"]
         }
-
+     
 //     JSON返回示例：
 //{
 //  errNum: 0,     //返回错误码
