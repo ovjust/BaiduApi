@@ -15,7 +15,8 @@ namespace BaiduApi.BaseApi
 {
     /// <summary>
     /// 股票当前时间数据查询
-    /// http://apistore.baidu.com/astore/serviceinfo/1863.html
+    /// https://dashboard.juhe.cn/data/index/my   
+    /// 限每天50次请求，开通「黑钻会员」不限次数
     /// </summary>
     public class JuheStock
     {

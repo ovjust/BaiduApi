@@ -44,9 +44,39 @@ namespace BaiduApi.BaseApi
             content = client.Execute(request);
             if (content.StatusCode != System.Net.HttpStatusCode.OK)
                 throw new Exception(content.StatusCode.ToString()+" "+content.Content);
-            JsonDeserializer json = new JsonDeserializer();
+            
+     
+          
+            //JsonDeserializer json = new JsonDeserializer();
           //var str=  json.Deserialize<string>(content);
             return content.Content;
+            //return content.Content.Trim('\"');
+        }
+
+        public static IRestResponse RequestResponse(RestRequest request, Method method, string baseUrl)
+        {
+            //var url = AppSettings.ApiServerUrl;
+            var client = new RestClient(baseUrl);
+            IRestResponse content;
+            request.Method = method;
+            //switch (method)
+            //{
+            //    case Method.POST:
+            //        content = client.Post(request);
+            //        break;
+            //    case Method.DELETE:
+            //        content = client.Delete(request);
+            //        break;
+            //    case Method.PUT:
+            //        content = client.Put(request);
+            //        break;
+            //    default:
+            //        content = client.Get(request);
+            //        break;
+            //}
+            content = client.Execute(request);
+            
+            return content;
             //return content.Content.Trim('\"');
         }
 
